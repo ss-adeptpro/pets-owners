@@ -1,2 +1,3 @@
-# pets-owners
-  Just creating a demo for small project to show list of pet owners
+# React + TypeScript + Vite + Redux Toolkit + RTK Query
+
+Output a list of all the cats in alphabetical order under a heading of the gender of their owner
