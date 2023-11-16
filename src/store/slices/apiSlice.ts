@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { Header } from '../constants/headerConstants';
+import { Header } from '../../constants/headerConstants';
 
 //Creates an api service to use in the application
 export const apiSlice = createApi({
