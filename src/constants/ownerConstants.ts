@@ -1,0 +1,1 @@
+export const OWNER_TAG : string  = 'Owner'; //tag for caching
