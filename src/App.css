@@ -85,6 +85,15 @@
   text-align: left;
 }
 
+.loadingSpinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+
 @media (min-width:480px)  { 
   .owner {
     width:100%;

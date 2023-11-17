@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { useGetOwnersQuery } from "../../store/slices/ownersSlice";
 import Owner from "./Owner";
 import { groupListByKey } from "../../helpers/util";
+import Loader from "../Loader/Loader";
 
 
 const Owners = () => {
@@ -20,7 +21,8 @@ const Owners = () => {
   let content
 
   if (isFetching) {
-    content = 'Loading....'
+    //show spinner
+    content = <Loader />
   } else if (isSuccess) {
     content = Object.entries(groupedOwners).map(([gender, owners]) => (
         <div className="ownerContainer" key={gender}>
@@ -32,14 +34,14 @@ const Owners = () => {
           </div>
         </div>
       ))
-  } else if (isError) {
-    content = <div>{error.toString()}</div>
+  } else if (isError) {    
+    content = <div>{error?.message}</div>
   }
   
   return (
     <div className="ownersList">
       <div className="title">CAT Owners</div>
-      {content}
+      {content}      
     </div>
   )
 }
