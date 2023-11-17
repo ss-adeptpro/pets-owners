@@ -28,8 +28,7 @@ export const groupListByKey = <T>(keys: (keyof T)[]) => (array: T[]): Record<str
     
     //exclude owners having no pets
     petsArray && (objectsByKeyValue[value.toLowerCase()] = (objectsByKeyValue[value.toLowerCase()] || []).concat(objTemp));
-
-    //objectsByKeyValue[value.toLowerCase()] = (objectsByKeyValue[value.toLowerCase()] || []).concat(objTemp);
+    
     return objectsByKeyValue;
   }, {} as Record<string, T[]>);
 
