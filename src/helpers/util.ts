@@ -1,6 +1,7 @@
 import isNil from "lodash/isNil";
 import isNaN from "lodash/isNaN";
 import {isEmpty as isInputEmpty} from "lodash";
+import { TPet } from "../types/ownersTypes";
 
 const PET_TYPE_FILTER : string = 'cat';
 
@@ -17,13 +18,18 @@ export const groupListByKey = <T>(keys: (keyof T)[]) => (array: T[]): Record<str
       return {};
 
     //pull owners only with Cats (as per the pet type)
-    const petsArray = obj.pets && obj.pets.filter(pet => {  		
+    const petsArray = obj?.pets && obj.pets.filter(pet => {  		
       return (pet.type.toLowerCase() === PET_TYPE_FILTER)
     })
 
+    //sort the cats
+    petsArray && petsArray.sort((a:TPet, b:TPet) => b.name.localeCompare(a.name))
     const objTemp = { ...obj, pets: petsArray };
+    
+    //exclude owners having no pets
+    petsArray && (objectsByKeyValue[value.toLowerCase()] = (objectsByKeyValue[value.toLowerCase()] || []).concat(objTemp));
 
-    objectsByKeyValue[value?.toLowerCase()] = (objectsByKeyValue[value?.toLowerCase()] || []).concat(objTemp);
+    //objectsByKeyValue[value.toLowerCase()] = (objectsByKeyValue[value.toLowerCase()] || []).concat(objTemp);
     return objectsByKeyValue;
   }, {} as Record<string, T[]>);
 
