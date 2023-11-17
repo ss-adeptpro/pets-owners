@@ -1,10 +1,10 @@
 import './App.css'
+import Owners from './components/owners/Owners'
 
-function App() {
-
+function App() {  
   return (
     <>
-      Testing Demo
+      <Owners></Owners>
     </>
   )
 }
