@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { TOwner } from '../../types/ownersTypes'
 import Pet from '../pets/Pet';
 
@@ -17,4 +18,6 @@ const Owner = ({owner} : {owner: Partial<TOwner>}) => {
   )
 }
 
-export default Owner
+//memoize owner component to prevent un-necessary renderings
+const OwnerMemoized = memo(Owner);
+export default OwnerMemoized;
