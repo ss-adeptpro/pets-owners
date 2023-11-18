@@ -1,11 +1,11 @@
 import './App.css'
-import Owners from './components/owners/Owners'
+import AppRoutes from './components/AppRoutes'
 
 function App() {  
   return (
-    <>
-      <Owners></Owners>
-    </>
+    <div className="appContainer">
+        <AppRoutes></AppRoutes>
+    </div>
   )
 }
 

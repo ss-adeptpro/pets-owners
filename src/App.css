@@ -2,8 +2,44 @@
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid #fba061;  
+}
+
+.header {
+  background-color: #F97316;
+  color: white;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1.25rem;
+  display: inline-block;
+  transition: all 500ms ease-in-out;
+}
+
+.header a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.active {
+  background-color: #000;
+  color: white;
+}
+
+.bodyContainer {
+  padding: 1.25rem;
+  min-height: 500px;
 }
 
 .ownersList {
@@ -38,18 +74,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: lightgrey;
+  background-color: #e6e6e6;
   width:22%;
   border-radius: 0.625rem;
+  box-shadow: 0.125rem 0.125rem 0.625rem #e6e6e6;
 }
 
 .ownerHeading {
   font-size: 1rem;
   font-weight: bold;
-  background-color: #F97316;
+  background-color: #fba061;
   color: white;
   text-align: center;
   width: 100%;
+  padding: 0.3125rem 0;
 }
 
 .owner:first-child {
@@ -96,7 +134,25 @@
   color: red;  
 }
 
-@media (min-width:30em)  { 
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3125rem;
+}
+
+.homeItems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3125rem;
+}
+
+.homeItem {
+  text-align: left;
+}
+
+@media (min-width:20em)  { 
   .owner {
     width:100%;
   }
