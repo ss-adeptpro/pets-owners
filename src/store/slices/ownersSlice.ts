@@ -1,3 +1,4 @@
+import { API_OWNERS_TIMEOUT } from "../../constants/apiConstants";
 import { OWNER_TAG } from "../../constants/ownerConstants";
 import { TOwners } from "../../types/ownersTypes";
 import { apiSlice } from "./apiSlice";
@@ -9,7 +10,12 @@ const ownerApiWithTag = apiSlice.enhanceEndpoints({addTagTypes: [OWNER_TAG]})
 export const ownersApiSlice = ownerApiWithTag.injectEndpoints({
   endpoints: builder => ({
     getOwners: builder.query<TOwners, void>({
-      query: () => '/owners',
+      query: () => ({
+        url: `/owners`,
+        //if taking over > 2000ms, something is wrong so abort the request.
+        //this timeout will take priority
+        timeout: API_OWNERS_TIMEOUT
+      }),
       providesTags: [OWNER_TAG] //for caching
     })
   })

@@ -3,13 +3,16 @@ import { useGetOwnersQuery } from "../../store/slices/ownersSlice";
 import Owner from "./Owner";
 import { groupListByKey } from "../../helpers/util";
 import Loader from "../Loader/Loader";
+import useApiError from "../../hooks/useApiError";
+import Error from "../error/error";
 
-
-const Owners = () => {
+const Owners = () => {  
   //assign a default empty array to data in case it's undefined, and we always have an array to sort on
   const {
     data : owners = [], isFetching, isSuccess, isError, error
   } = useGetOwnersQuery();
+
+  const errMsg = useApiError(error);
 
   //useMemo:  caching to avoid re-grouping and sorting on every rerender
   const groupedOwners = useMemo(() => {
@@ -35,7 +38,7 @@ const Owners = () => {
         </div>
       ))
   } else if (isError) {    
-    content = <div>{error?.message}</div>
+    content = <Error errorMsg={errMsg} />
   }
   
   return (

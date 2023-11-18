@@ -13,6 +13,9 @@ router.get("/", function (req, res, next) {
       if (!error && response.statusCode == 200) {
         res.status(200).json(JSON.parse(body));
       }
+
+      //just for testing
+      //res.status(500).send(JSON.stringify({ message: "broke" }));
     }
   );
 });
