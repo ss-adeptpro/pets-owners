@@ -11,6 +11,9 @@ const Home = () => {
           Output a list of all the cats in alphabetical order under a heading of the gender of their owner
         </li>      
         <li className="homeItem">
+          RTK Query to interact with web service with caching and timeout features
+        </li>
+        <li className="homeItem">
           Lazy loading of pages
         </li>
         <li className="homeItem">
