@@ -23,7 +23,7 @@ Install my-project with npm
 - Responsive web pages
 - Handle CORS issue for api
 
-![owners](https://github.com/ss-adeptpro/pets-owners/assets/11929132/20ebede9-5ba1-4215-85c3-3428350e2dea)
-![owners3](https://github.com/ss-adeptpro/pets-owners/assets/11929132/61f49e7a-7765-4679-94fe-af89f0f91620)
-![owners2](https://github.com/ss-adeptpro/pets-owners/assets/11929132/3d6ccaa3-de4a-4e2c-8fbc-acdc833f081f)
+![owners](https://github.com/ss-adeptpro/pets-owners/assets/11929132/81eb867f-95b1-4bc0-a19d-6002dc559fad)
+![owners2](https://github.com/ss-adeptpro/pets-owners/assets/11929132/73cded94-7a7a-4941-878b-a4fa5b3f0c22)
+![owners3](https://github.com/ss-adeptpro/pets-owners/assets/11929132/f62bff00-e347-44e1-ab1f-9c6bed88861d)
 ![homepage](https://github.com/ss-adeptpro/pets-owners/assets/11929132/aa9c7ce9-864c-442f-9099-8683036d5834)
