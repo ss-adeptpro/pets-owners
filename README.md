@@ -6,8 +6,6 @@ Output a list of all the cats in alphabetical order under a heading of the gende
 
 **Client:** React, Vite, Redux Toolkit, RTK Query, TypeScript, HTML5, CSS
 
-**Server:** Node, Express
-
 ## Installation
 
 Install my-project with npm

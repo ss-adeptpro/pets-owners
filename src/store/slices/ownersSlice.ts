@@ -11,7 +11,7 @@ export const ownersApiSlice = ownerApiWithTag.injectEndpoints({
   endpoints: builder => ({
     getOwners: builder.query<TOwners, void>({
       query: () => ({
-        url: `/owners`,
+        url: `/people.json`,
         //if taking over > 2000ms, something is wrong so abort the request.
         //this timeout will take priority
         timeout: API_OWNERS_TIMEOUT

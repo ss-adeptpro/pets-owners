@@ -5,9 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     //setup proxy to handle CORS issue
-    //all urls with /api will be processed thru http://localhost:3000
     proxy: {
-      '/api': "http://localhost:3000"
+      "/medibank-digital/a1fc81a93200a7b9d5f8b7eae0fac6f8/raw/de10a4fcf717e6c431e88c965072c784808fd6b2": "https://gist.githubusercontent.com/",
     }
   },
   plugins: [react()],
