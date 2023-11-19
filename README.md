@@ -25,3 +25,7 @@ Install my-project with npm
 ![owners3](https://github.com/ss-adeptpro/pets-owners/assets/11929132/f62bff00-e347-44e1-ab1f-9c6bed88861d)
 ![owners2](https://github.com/ss-adeptpro/pets-owners/assets/11929132/73cded94-7a7a-4941-878b-a4fa5b3f0c22)
 ![homepage](https://github.com/ss-adeptpro/pets-owners/assets/11929132/aa9c7ce9-864c-442f-9099-8683036d5834)
+
+![Error-timeout-abort](https://github.com/ss-adeptpro/pets-owners/assets/11929132/8aecf9e9-ee57-4c1c-9ac5-ea72843023ae)
+![Error-invalid-endpoint](https://github.com/ss-adeptpro/pets-owners/assets/11929132/8d9804da-1d6e-4ec9-98d0-414d47119a9f)
+
