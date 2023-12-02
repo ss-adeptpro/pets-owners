@@ -38,7 +38,7 @@ const Owners = () => {
         </div>
       ))
   } else if (isError) {    
-    content = <Error errorMsg={errMsg} />
+    content = <Error errorMsg={errMsg as string} />
   }
   
   return (
