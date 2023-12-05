@@ -59,4 +59,4 @@ jobs:
           app-name: 'pets-owners-demo'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFB8950E644B46D2BE24910E8ED4A7ED }}
-          package: .
+          package: pets-owners-release.zip
