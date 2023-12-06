@@ -1,16 +1,41 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig, loadEnv } from "vite";
+import react from "@vitejs/plugin-react";
+import path from 'path';
 
+const envDirectoryPath = path.resolve(process.cwd() + '/src/environments');
+export default ({ mode }) => {
+  process.env = {...process.env, ...loadEnv(mode, envDirectoryPath, '')};
+  return defineConfig({
+    server: {
+      //setup proxy to handle CORS issue
+      proxy: {
+        '/api': {
+          target: `${process.env.VITE_API_TARGET_URL}`,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      }
+    },
+    plugins: [react()],
+    envDir: envDirectoryPath,
+    //envDir: './src/environments',
+  });
+}
+
+/*
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
     //setup proxy to handle CORS issue
-    //https://pets-owners.vercel.app/medibank-digital/a1fc81a93200a7b9d5f8b7eae0fac6f8/raw/de10a4fcf717e6c431e88c965072c784808fd6b2/people.json
-    //http://127.0.0.1:5173/medibank-digital/a1fc81a93200a7b9d5f8b7eae0fac6f8/raw/de10a4fcf717e6c431e88c965072c784808fd6b2/people.json
     proxy: {
-      "/api": "https://gist.githubusercontent.com/medibank-digital/a1fc81a93200a7b9d5f8b7eae0fac6f8/raw/de10a4fcf717e6c431e88c965072c784808fd6b2/",
+      '/api': {
+        target: `${env.VITE_API_TARGET_URL}`,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
     }
   },
   plugins: [react()],
   envDir: './src/environments',
 })
+*/
